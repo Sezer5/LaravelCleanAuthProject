@@ -21,6 +21,14 @@
     .loginForm{
         padding: 30px;
         border: 2px dashed lightgray;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .loginForm form{
+        display: flex;
+        flex-direction: column;
     }
     .loginElement{
         margin: 10px 0px;
@@ -38,7 +46,10 @@
             @csrf
             <input class="loginElement" type="text" name="email" placeholder="E-mail">
             <input class="loginElement" type="text" name="password" placeholder="Password">
-            <button class="loginElement">Gönder</button>
+            <div class="loginElement">
+                <button>Gönder</button>
+            </div>
+            
         </form>
     </div>
 </body>
