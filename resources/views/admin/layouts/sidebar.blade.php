@@ -11,6 +11,7 @@
     </ul>
     <ul class="list-group list-group-flush">
         <a href="{{route('admin.categories.index')}}" class="text-decoration-none"><li class="list-group-item bg-secondary text-white">Categories</li></a>
+        <a href="{{route('admin.keywords.index')}}" class="text-decoration-none"><li class="list-group-item bg-secondary text-white">Keywords</li></a>
         <li class="list-group-item bg-secondary text-white">Cras justo odio</li>
         <li class="list-group-item bg-secondary text-white">Cras justo odio</li>
     </ul>

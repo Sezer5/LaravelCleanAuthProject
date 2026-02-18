@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\KeywordsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/admin/login',[AdminController::class,"login"])->name("admin.login");
@@ -20,5 +21,7 @@ Route::middleware(['role:admin'])
 
         // URL: /admin/categories | İsim: admin.categories.index (ve diğerleri)
         Route::resource('categories', CategoryController::class);
+
+        Route::resource('keywords',KeywordsController::class);
         
     });
