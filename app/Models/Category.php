@@ -13,4 +13,8 @@ class Category extends Model
     {
         return 'slug';
     }
+
+    public function articles(){
+        return $this->hasMany(Article::class);
+    }
 }
