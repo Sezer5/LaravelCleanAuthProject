@@ -3,6 +3,8 @@
     <div v-for="article in articleStore.articles" :key="article.id">{{ article.title }}
       <img :src="article.picture " width="140">
     </div>
+    <div v-for="keywords in articleStore.keywords" :key="keywords.id">{{ keywords.name }}
+    </div>
   </div>
 </template>
 
