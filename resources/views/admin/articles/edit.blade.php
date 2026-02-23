@@ -12,8 +12,9 @@
 </style>
 <div class="col-md-10 col-lg-10">
     <div class="col-md-4 col-lg-4 m-3">
-        <form action="{{route('admin.articles.store')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{route('admin.articles.update',$article->id)}}" method="POST" enctype="multipart/form-data">
             @csrf
+            @method('PUT')
             <div class="form-group mb-3">
                 <label for="exampleInputEmail1">Title*</label>
                 <input type="text" class="form-control" name="title" placeholder="Enter a title" value="{{$article->title,old('title')}}">
@@ -64,7 +65,7 @@
                 <textarea name="desc" class="form-control"></textarea>
             </div>
             <div class="form-group my-2 text-right">
-                <button type="submit" class="btn btn-dark btn-sm"><i class="fa-solid fa-plus"></i></button>
+                <button type="submit" class="btn btn-dark btn-sm"><i class="fa-solid fa-refresh"></i></button>
             </div>
         </form>
     </div>

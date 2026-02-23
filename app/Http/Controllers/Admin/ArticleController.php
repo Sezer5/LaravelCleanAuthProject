@@ -84,6 +84,7 @@ class ArticleController extends Controller
     {
         //
         if($request->validated()){
+            echo "Validated";
             $data = $request->validated();
             if($request->has('picture')){
                 $this->removePictureFromStorage($article->picture);
