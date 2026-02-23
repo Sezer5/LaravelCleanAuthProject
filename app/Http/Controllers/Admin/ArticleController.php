@@ -84,7 +84,6 @@ class ArticleController extends Controller
     {
         //
         if($request->validated()){
-            echo "Validated";
             $data = $request->validated();
             if($request->has('picture')){
                 $this->removePictureFromStorage($article->picture);
@@ -102,9 +101,12 @@ class ArticleController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Article $article)
     {
         //
+        $this->removePictureFromStorage($article->picture);
+        $article->delete();
+        return redirect()->route('admin.articles.index')->wiht(['success' => 'Article Deleted Succesffully']);
     }
 
     public function saveImage($file){
